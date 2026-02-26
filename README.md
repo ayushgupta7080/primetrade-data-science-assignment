@@ -1,165 +1,140 @@
-Primetrade.ai – Sentiment-Based Trader Performance Analysis
+# Primetrade.ai – Data Science Internship Assignment
 
-This repository contains my submission for the Data Science Internship at Primetrade.ai.
+This repository contains my submission for the Data Science internship at Primetrade.ai.
+This repository contains my submission for the **Data Science Internship** at **Primetrade.ai**.  
+The project analyzes how **crypto trader behavior varies under different market sentiment regimes (Fear vs Greed)** using historical trading data.
 
-The project evaluates how crypto trader performance changes under different market sentiment regimes (Fear vs Greed) and translates these behavioral insights into actionable, data-driven strategy recommendations.
+## Objective
+Analyze the relationship between crypto trader behavior and market sentiment (Fear vs Greed).
+---
 
-🎯 Problem Statement
+## Contents
+- `ds_ayush/notebook_1.ipynb` – Google Colab notebook with full analysis
+- `ds_ayush/csv_files/trader_metrics.csv` – Computed trader performance metrics
+- `ds_ayush/outputs/` – Visualizations and charts
+- `ds_ayush/ds_report.pdf` – Final summary report with insights
+## 📌 Objective
 
-Market sentiment significantly influences trading behavior and risk exposure.
+The goal of this assignment is to:
+- Analyze trader performance under different market sentiment conditions
+- Understand how sentiment (Fear vs Greed) impacts profitability and risk
+- Identify high-performing and contrarian traders
+- Generate insights that can support smarter trading strategies
 
-This project aims to:
+---
 
-Quantify how trader profitability and risk vary under different sentiment regimes
+## 📊 Datasets Used
 
-Measure the impact of sentiment on key performance metrics
+1. **Bitcoin Fear & Greed Index**
+   - Daily market sentiment classified as Fear, Extreme Fear, Greed, or Extreme Greed
+   - Used to label market conditions
 
-Identify traders who outperform under specific market conditions
+2. **Historical Trader Data (Hyperliquid)**
+   - Trade-level data including:
+     - Trader account
+     - Trade size
+     - Profit & Loss (PnL)
+     - Timestamps
+   - Used to compute trader performance metrics
 
-Detect contrarian traders with regime-dependent behavior
+---
 
-Generate structured insights that can support sentiment-aware trading strategies
+## 🛠️ Methodology
 
-📊 Data Sources
-1️⃣ Bitcoin Fear & Greed Index
+The analysis follows these steps:
+1. Data cleaning and preprocessing
+2. Mapping each trade to the corresponding market sentiment
+3. Simplifying sentiment into two regimes: **Fear** and **Greed**
+4. Computing trader-level metrics under each regime:
+   - Total PnL
+   - Win Rate
+   - ROI
+   - Sharpe Ratio
+   - Maximum Drawdown
+5. Ranking traders by performance
+6. Identifying **contrarian traders** who perform differently across sentiment regimes
+7. Visualizing key patterns and insights
 
-Daily sentiment classification: Extreme Fear, Fear, Greed, Extreme Greed
+---
 
-Used to label macro market conditions
+## 📈 Key Metrics Analyzed
 
-Simplified into two analytical regimes: Fear and Greed
+- **Total PnL**
+- **Win Rate**
+- **Return on Investment (ROI)**
+- **Sharpe Ratio**
+- **Maximum Drawdown**
+- **Trade Frequency**
+- **Contrarian Performance (Fear vs Greed)**
 
-2️⃣ Historical Trade-Level Data (Hyperliquid)
+---
 
-Includes:
-
-Trader account identifiers
-
-Trade size
-
-Profit & Loss (PnL)
-
-Execution timestamps
-
-This dataset enables computation of trader-level performance metrics and regime-based behavioral analysis.
-
-⚙️ Analytical Approach
-
-The project follows a structured analytics workflow:
-
-1. Data Preparation
-
-Cleaned and validated trade-level data
-
-Handled timestamp alignment and missing values
-
-Standardized sentiment classifications
-
-2. Sentiment Mapping
-
-Mapped each trade to its corresponding market sentiment
-
-Consolidated into two regimes: Fear vs Greed
-
-3. Metric Engineering (KPI Framework)
-
-Computed trader-level metrics under each regime:
-
-Total PnL
-
-Win Rate
-
-Return on Investment (ROI)
-
-Sharpe Ratio (Risk-Adjusted Return)
-
-Maximum Drawdown
-
-Trade Frequency
-
-4. Comparative & Regime-Based Analysis
-
-Ranked traders by performance under each sentiment regime
-
-Compared ROI and risk-adjusted returns across regimes
-
-Identified contrarian traders who perform significantly better in opposing market conditions
-
-5. Visualization & Insight Communication
-
-Built visualizations to clearly highlight regime-based performance shifts
-
-Structured findings into an interpretable decision-support report
-
-📈 Key Insights Generated
-
-Sentiment regimes materially impact profitability and drawdown behavior
-
-Certain traders exhibit consistent performance across regimes
-
-Contrarian traders demonstrate stronger performance during adverse sentiment periods
-
-Regime-aware performance segmentation can improve trader evaluation frameworks
-
-These insights can support:
-
-Risk-adjusted allocation decisions
-
-Strategy refinement based on market conditions
-
-Identification of adaptive vs sentiment-sensitive traders
-
-📁 Repository Structure
+## 📁 Repository Structure
 ds_ayush/
 
-├── notebook_1.ipynb        # Full analysis notebook (Google Colab)
+├── notebook_1.ipynb # Google Colab notebook with full analysis
 
 ├── csv_files/
-│   └── trader_metrics.csv  # Computed trader-level KPI dataset
+
+│ └── trader_metrics.csv # Final computed trader metrics
 
 ├── outputs/
-│   ├── pnl_by_sentiment.png
-│   ├── avg_roi_by_sentiment.png
-│   └── top_traders_by_roi.png
 
-├── ds_report.pdf           # Final summarized analytical report
-📊 Visualizations Included
+│ ├── pnl_by_sentiment.png
 
-PnL distribution by market sentiment
+│ ├── avg_roi_by_sentiment.png
 
-Average ROI comparison (Fear vs Greed)
+│ └── top_traders_by_roi.png
 
-Trader ranking by ROI
+├── ds_report.pdf # Final summarized report and insights
 
-Regime-based performance segmentation
 
-📄 Final Report
+---
 
-The ds_report.pdf includes:
+## 📊 Visualizations Included
 
-Business context and objective
+- PnL distribution by market sentiment
+- Average ROI comparison (Fear vs Greed)
+- Top traders by ROI under different sentiment regimes
 
-Dataset overview
+---
 
-Methodology and KPI logic
+## 📄 Report
 
-Trader ranking framework
+The **`ds_report.pdf`** contains:
+- Problem overview
+- Dataset description
+- Methodology
+- Key findings
+- Trader ranking logic
+- Actionable insights for trading strategies
 
-Regime-based comparative analysis
+---
 
-Actionable insights and strategic implications
+## Business Impact
+- Identified trader segments performing optimally under specific sentiment regimes
+- Suggested regime-based strategy adjustments
+- Demonstrated how sentiment-driven insights can optimize risk management
 
-🧰 Tools & Technologies
+---
 
-Python
+## 🧰 Tools & Libraries
 
-Pandas, NumPy
+## Tools Used
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Google Colab
 
-Matplotlib, Seaborn
+---
 
-Google Colab
+## 👤 Author
 
-👤 Author
+**Ayush Gupta**  
+Data Science Intern Applicant – Primetrade.ai
 
-Ayush Gupta
-Data Analyst / Data Science Internship Applicant
+---
+
+
+## Author
+Ayush
