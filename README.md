@@ -1,8 +1,7 @@
-# Primetrade.ai – Data Science Internship Assignment
+Data Science Internship Assignment
 
-This repository contains my submission for the Data Science internship at Primetrade.ai.
-This repository contains my submission for the **Data Science Internship** at **Primetrade.ai**.  
-The project analyzes how **crypto trader behavior varies under different market sentiment regimes (Fear vs Greed)** using historical trading data.
+
+This project analyzes how **crypto trader behavior varies under different market sentiment regimes (Fear vs Greed)** using historical trading data.
 
 ## Objective
 Analyze the relationship between crypto trader behavior and market sentiment (Fear vs Greed).
